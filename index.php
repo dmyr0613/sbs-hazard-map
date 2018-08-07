@@ -42,7 +42,8 @@ foreach ($events as $event) {
   //APIをコール
   //$jsonString = file_get_contents('https://afternoon-bastion-78019.herokuapp.com/tsunami/index?idou=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16');
   //error_log('https://afternoon-bastion-78019.herokuapp.com/tsunami/index?idou=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16');
-  $jsonString = file_get_contents('https://mapapi-maulanamania.c9users.io/api_pages/location?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_15');
+  //$jsonString = file_get_contents('https://mapapi-maulanamania.c9users.io/api_pages/location?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_15');
+  $jsonString = file_get_contents('https://sbs-maulanamania.c9users.io/hazard_maps/ljson01?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16_sbs_1');
 
 
   // 文字列を連想配列に変換
