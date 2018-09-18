@@ -45,7 +45,7 @@ foreach ($events as $event) {
   //$jsonString = file_get_contents('https://mapapi-maulanamania.c9users.io/api_pages/location?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_15');
   //$jsonString = file_get_contents('https://sbs-maulanamania.c9users.io/hazard_maps/ljson01?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16_sbs_1');
   $jsonString = file_get_contents('http://hazard-maulanamania.c9users.io/tsunami/map?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16_sbs_1');
-
+  error_log('http://hazard-maulanamania.c9users.io/tsunami/map?coord=' . $event->getLatitude() . '_' . $event->getLongitude() . '_640_640_jpg_16_sbs_1');
 
   // 文字列を連想配列に変換
   $obj = json_decode($jsonString, true);
